@@ -1,0 +1,61 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+    transition-duration: 1s;
+}
+
+p {
+    font-size: x-large;
+    color: white;
+}
+
+main:hover img {
+    transform: rotateZ(15deg) scale(1.2);
+}
+main:hover div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    transition: 1s;
+    flex-direction: column;
+    font-size: x-large;
+    color: white;
+}
+
+div {
+    position: absolute;
+    display: none;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0.463);
+}
+img {
+    transition-duration: 1s;
+}
